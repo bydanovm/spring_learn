@@ -1,13 +1,16 @@
 package com.bydanovm.springl;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Parrot {
     private String name;
-
-    public void setName(String string) {
-        name = string;
-    }
 
     public String getName() {
         return name;
     }
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }

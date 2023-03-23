@@ -10,18 +10,10 @@ public class App
     {
         AnnotationConfigApplicationContext context 
             = new AnnotationConfigApplicationContext(ProjectConfig.class);
-        // System.out.println( "Hello World!" );
 
-        // Выведент бин с аннотацией @Primary
-        Parrot p1 = context.getBean(Parrot.class);
-        System.out.println(p1.getName());
-
-        // Выведент бин с именем "miki"
-        Parrot p2 = context.getBean("miki", Parrot.class);
-        System.out.println(p2.getName());
-
-        // Выведент бин с именем класса parrot1
-        Parrot p3 = context.getBean("parrot1", Parrot.class);
-        System.out.println(p3.getName());
+        Parrot p = context.getBean(Parrot.class);
+        p.setName("aaaa");
+        System.out.println(p);
+        System.out.println(p.getName());
     }
 }
